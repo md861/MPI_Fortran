@@ -12,3 +12,7 @@ An example compilation and run for *fMatVecMul.f90* with just a single slave is 
 `$ mpifort -o test fMatVecMul.f90`  
 `$ mpirun -np 2 --use-hwthread-cpus test`  
 ![](/images/SingleSlaveExample.png)
+
+## Profiling tools
+[Extrae](https://tools.bsc.es/tools_hands-on) is an open-source profiling tool that provides various event logs for MPI, OpenMP (amongst other) libraries. The log files generated during run time can be viewed with [Paraver](https://tools.bsc.es/paraver) - a graphical tool for viewing program performance and profiling. Some examples are shown below for the *fMatVecMul.f90* file when run with 4 threads.
+![](/images/MPIstats.png)![](/images/MPI_calls.png)![](/images/com_size.png)
